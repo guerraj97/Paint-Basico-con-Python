@@ -1,5 +1,5 @@
 # Paint-Basico-con-Python
-Codigo basico para un paint muy básico utilizando Python 3 y Pygame
+Codigo basico para un paint simple, con una brocha utilizando Python 3 y Pygame
 En caso de utilizar MacOS es importante considerar instalar lo siguiente:
 
 Create and add the following to ~/.bash_profile:
