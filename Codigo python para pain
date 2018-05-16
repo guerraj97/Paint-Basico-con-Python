@@ -1,0 +1,18 @@
+import sys,pygame
+from pygame.locals import * #importar paquete de pygame previamente instalado desde consola (ver README)
+pygame.init()#inicializacion de pygame para su uso
+screen = pygame.display.set_mode([800,600]) #creacion de una pantalla de la interfaz de dibujo
+RED = (255, 0 , 0) #aqui se puede cambiar el color de la plumilla con codigo RGB
+running = True
+while running: # This would start the event loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: # evento de cierre.
+            running = False #el usuario puede cerrar la ventana
+        if pygame.mouse.get_pressed()[0]: #si el mouse esta presionado entonces dibuja
+            pygame.draw.circle(screen, RED,pygame.mouse.get_pos(),5) #pygame.mouse.get_pos() obtiene la posicion y la 
+                                                                     #y la coloca en la funcion para que ahi dibuje la pluma
+        if pygame.key.get_pressed()[pygame.K_BACKSPACE]:
+            screen.fill((0, 0, 0)) #borra la pantalla
+        print(pygame.mouse.get_pos())    
+    pygame.display.flip() # evita error y mantiene la interfaz funcionando.
+pygame.quit()
